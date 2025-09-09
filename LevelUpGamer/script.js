@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
 
-    // Registro de cuenta
+    //Registro de cuenta
     const registroForm = document.getElementById('formRegistro');
     if (registroForm) {
         registroForm.addEventListener('submit', function(e) {
@@ -11,18 +11,22 @@ document.addEventListener('DOMContentLoaded', function() {
                 alert('Completa todos los campos.');
                 return;
             }
+                if (clave.length < 4 || clave.length > 12) {
+                    alert('La contraseña debe tener entre 4 y 12  caracteres.');
+                    return;
+                }
             if (localStorage.getItem(email)) {
-                alert('El usuario ya existe.');
+                alert('Este correo ya se encuentra registrado.');
                 return;
             }
             localStorage.setItem(email, clave);
-            alert('Registro exitoso. Ahora puedes iniciar sesión.');
-            window.location.href = 'incioSesion.html';
+            alert('Su cuenta se ha registrado exitosamente.');
+            window.location.href = 'inicioSesion.html';
         });
     }
 
-    // Inicio de sesión
-    const loginForm = document.getElementById('loginForm');
+    //Inicio de sesión
+    const loginForm = document.getElementById('formLogin');
     if (loginForm) {
         loginForm.addEventListener('submit', function(e) {
             e.preventDefault();
@@ -37,13 +41,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 alert('Sesión iniciada correctamente.');
                 window.location.href = 'inicio.html';
             } else {
-                alert('Correo o clave invalidos / no registrados.');
+                alert('Correo o clave invalidos.');
             }
         });
     }
 
-    // Cambio de contraseña
-    const resetForm = document.getElementById('resetForm');
+    //Cambio de contraseña
+    const resetForm = document.getElementById('formPass');
     if (resetForm) {
         resetForm.addEventListener('submit', function(e) {
             e.preventDefault();
@@ -54,8 +58,12 @@ document.addEventListener('DOMContentLoaded', function() {
                 alert('Completa todos los campos.');
                 return;
             }
+                if (newClave.length < 4 || newClave.length > 12) {
+                    alert('La nueva contraseña debe tener entre 4 y 12 caracteres.');
+                    return;
+                }
             if (newClave !== confirmClave) {
-                alert('Las contraseñas no coinciden.');
+                alert('Las contraseñas no son iguales.');
                 return;
             }
             if (!localStorage.getItem(email)) {
@@ -63,8 +71,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 return;
             }
             localStorage.setItem(email, newClave);
-            alert('Contraseña actualizada. Ahora puedes iniciar sesión.');
-            window.location.href = 'incioSesion.html';
+            alert('Su contraseña se actualizó con éxito.');
+            window.location.href = 'inicioSesion.html';
         });
     }
 });

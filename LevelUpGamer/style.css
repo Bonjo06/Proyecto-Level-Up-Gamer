@@ -34,7 +34,10 @@ h1, h2 {
 .btn-primary {
   background-color: #9333EA !important; /*color fondo botones*/
   border: none !important;
-  transition: 0.3s;
+
 }
 
-
+.bg-light {
+    --bs-bg-opacity: 1;
+    background-color: #1c1c1e !important;
+}
