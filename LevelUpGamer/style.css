@@ -1,62 +1,42 @@
-
+/* === Estilos generales === */
 body {
-
-background-color: #3e3d3d;
-
-font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',sans-serif;
-
-text-align: left;
-
-padding: 50px;
-
-color: #464444;
-
+  background-color: #1c1c1e; /* Fondo oscuro */
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: #e5e5e5; /* Texto claro */
+  padding: 50px;
 }
 
-h1 {
-
-color: #FFFFFF;
-
-font-size: 3em;
-
-margin-bottom: 20px;
-
+/* === Header === */
+header {
+  background-color: #6D28D9; /* Morado gamer */
+  color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
 }
 
-p {
-
-font-size: 1em;
-
-color: #000000;
-
+/* === Secciones === */
+h1, h2 {
+  color: #ffffff; /* Morado vibrante para títulos */
 }
-
-.imagen-fondo {
-            background-color: #ccc;
-            padding: 15px;
-            width: 580px; 
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-            display: flex;
-            justify-content: center; /* centra horizontalmente */
-            align-items: center;     /* centra verticalmente */
-            }
 
 .imagenes-wrapper {
-            display: flex;            /* pone los videos en fila */
-            gap: 20px;                /* espacio entre videos */
-            flex-wrap: wrap;          /* se ajustan a otra fila si no caben */
-            justify-content: left;  /* centra los videos horizontalmente */
-            }
-.error-message {
-    color: red;
-    font-size: 0.8em;
-    display: none; /* Oculto por defecto */
-  }
-.barra-encabezado {
-                    background-color: #434242; /* Un color azul que puedes cambiar */
-                    color: rgb(243, 239, 239); /* Color del texto */
-                    padding: 25px; /* Espaciado interno */
-                }
+  display: flex;
+         /* Para que bajen a otra fila */
+  justify-content: flex-start; /* 🔹 Alineados a la izquierda */
+  gap: 20px;               /* Espacio entre tarjetas */
+  width: 100%;             /* Que use todo el ancho disponible */
+  margin: 0;               /* Sin centrado */
+  padding: 20px;
+}
 
+/* === Botones === */
+.btn-primary {
+  background-color: #9333EA !important; /* Morado */
+  border: none !important;
+  transition: 0.3s;
+}
 
+.btn-primary:hover {
+  background-color: #39FF14 !important; /* Verde neón gamer */
+  color: #000000 !important;
+}
