@@ -4,7 +4,7 @@
 
     <head>
     <meta charset="UTF-8" />
-    <title>Login</title>
+    <title>Recuperar Contraseña</title>
 
     <!--Link bootstrap-->
     <link
@@ -18,28 +18,32 @@
         <div class="card shadow-lg p-4 rounded-4" style="width: 22rem;">
             <h3 class="text-center mb-4">Recuperar Contraseña</h3>
 
-            <form>
+            <form id="resetForm">
             <!--correo-->
             <div class="mb-3">
                 <label for="emailUser" class="form-label">Correo electronico</label>
-                <input type="email" class="form-control" id="emailUser" aria-describedby="emailHelp", placeholder="usuario@gmail.com">
+                <input type="email" class="form-control" id="emailUser" aria-describedby="emailHelp" placeholder="usuario@gmail.com">
             </div>
 
             <!--reinicio contraseñas-->
             <div class="mb-3">
-                <label for="passUser" class="form-label">Ingrese nueva contraseña</label>
-                <input type="password" class="form-control" id="passUser", placeholder="********">
+                <label for="newPassUser" class="form-label">Ingrese nueva contraseña</label>
+                <input type="password" class="form-control" id="newPassUser" placeholder="********">
             </div>
 
-
             <div class="mb-3">
-                <label for="passUser" class="form-label">Vuelva a ingresar la nueva contraseña</label>
-                <input type="password" class="form-control" id="passUser", placeholder="********">
+                <label for="confirmPassUser" class="form-label">Vuelva a ingresar la nueva contraseña</label>
+                <input type="password" class="form-control" id="confirmPassUser" placeholder="********">
+            </div>
+
+            <div >
+                <a href = "inicioSesion.html" class="medium">Volver al inicio de sesión</a>
             </div>
 
             <!--boton que devuelve al login-->
-            <a href="incioSesion.html" class="btn btn-primary w-100">Volver a inicio de sesión</a>
+            <button type="submit" class="btn btn-primary w-100">Recuperar Contraseña</button>
             </form>
+            <script src="script.js"></script>
 
             
         </div>
